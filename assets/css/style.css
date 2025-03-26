@@ -1,0 +1,141 @@
+/* -------------------------------- reset default padding, margin and box-sizing -------------------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* -------------------------------- light mode colors -------------------------------- */
+:root {
+    --bg-color: #F9F5ED;
+    --text-color: #333333;
+    --bg-shadow: #FFFFFF;
+    --accent-color: #E07A5F;
+    --border-color: #E0E0E0;
+}
+
+/* -------------------------------- dark mode colors -------------------------------- */
+body.dark {
+    --bg-color: #1E1B18;
+    --text-color: #F8F9FA;
+    --bg-shadow: #2C2723;
+    --accent-color: #FF7D6D;
+    --border-color: #44403C;
+
+    .filter-img {
+        filter: invert(1);
+    }
+}
+
+/* -------------------------------- default body styles -------------------------------- */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    width: 90%;
+    margin: auto;
+    transition: all 0.3s;
+
+    .filter-img {
+        filter: none;
+    }
+}
+
+/* -------------------------------- default button styles -------------------------------- */
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--border-color);
+    padding: 10px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+button:hover {
+    border: 2px solid var(--accent-color);
+    transition: all 0.3s;
+}
+
+button img {
+    height: 20px;
+    width: 20px;
+}
+
+/* -------------------------------- navbar styles -------------------------------- */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px auto;
+}
+
+/* -------------------------------- navbar heading styles -------------------------------- */
+nav h1 {
+    font-size: 2rem;
+}
+
+/* -------------------------------- navbar button styles -------------------------------- */
+.nav-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-btns button {
+    border-radius: 50%;
+}
+
+/* -------------------------------- editor styles -------------------------------- */
+.editor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+/* -------------------------------- editor option styles -------------------------------- */
+.editor-options {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    background-color: var(--bg-shadow);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 2px solid var(--border-color);
+    padding: 10px;
+}
+
+.editor-options button {
+    border-radius: 10px;
+}
+
+/* -------------------------------- text areas styles -------------------------------- */
+.text-areas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 80vh;
+    width: 100%;
+    background-color: var(--bg-shadow);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.text-areas div {
+    overflow: auto;
+    padding: 15px;
+}
+
+/* -------------------------------- writing area styles -------------------------------- */
+.writing-area {
+    border-right: 1px solid var(--border-color);
+}
+
+/* -------------------------------- preview area styles -------------------------------- */
+.preview-area {
+    border-left: 1px solid var(--border-color);
+}

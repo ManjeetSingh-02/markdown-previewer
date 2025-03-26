@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Previewer</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <h1>Markdown Previewer</h1>
+
+        <!-- theme and github buttons -->
+        <div class="nav-btns">
+            <button id="switchThemeBtn" title="Switch Theme">
+                <img id="themeImg" src="./assets/icons/moon.svg" alt="Theme" class="filter-img">
+            </button>
+            <button id="openGitHubBtn" title="Open GitHub">
+                <img src="./assets/icons/github.svg" alt="GitHub" class="filter-img">
+            </button>
+        </div>
+    </nav>
+
+    <!-- EDITOR -->
+    <section class="editor">
+        <!-- EDITOR OPTIONS(bold button, italic button etc) -->
+        <div class="editor-options">
+            <button title="Bold">
+                <img src="./assets/icons/bold.svg" alt="Bold" class="filter-img">
+            </button>
+            <button title="Italic">
+                <img src="./assets/icons/italic.svg" alt="Italic" class="filter-img">
+            </button>
+            <button title="Underline">
+                <img src="./assets/icons/underline.svg" alt="Underline" class="filter-img">
+            </button>
+            <button title="Heading 1">
+                <img src="./assets/icons/heading_1.svg" alt="Heading 1" class="filter-img">
+            </button>
+            <button title="Heading 2">
+                <img src="./assets/icons/heading_2.svg" alt="Heading 2" class="filter-img">
+            </button>
+            <button title="Heading 3">
+                <img src="./assets/icons/heading_3.svg" alt="Heading 3" class="filter-img">
+            </button>
+            <button title="Link">
+                <img src="./assets/icons/link.svg" alt="Link" class="filter-img">
+            </button>
+            <button title="Unordered List">
+                <img src="./assets/icons/unordered_list.svg" alt="Unordered List" class="filter-img">
+            </button>
+            <button title="Ordered List">
+                <img src="./assets/icons/ordered_list.svg" alt="Ordered List" class="filter-img">
+            </button>
+            <button title="Code">
+                <img src="./assets/icons/code.svg" alt="Code" class="filter-img">
+            </button>
+
+            <button title="Erase All">
+                <img src="./assets/icons/eraser.svg" alt="Erase All" class="filter-img">
+            </button>
+        </div>
+
+        <!-- EDITOR TEXT AREA -->
+        <div class="text-areas">
+            <!-- WRITING AREA -->
+            <div class="writing-area">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem numquam quos
+                labore nobis minima fugit, alias doloribus ea enim dolorum recusandae placeat sed tempora ratione nisi
+                iste, pariatur voluptatum amet ab iure commodi modi adipisci? Architecto facilis eveniet aperiam.
+                Placeat, id tenetur dolor earum labore doloremque qui ducimus, neque numquam molestias consequatur nihil
+                architecto!</div>
+
+            <!-- PREVIEW AREA -->
+            <div class="preview-area">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem numquam quos
+                labore nobis minima fugit, alias doloribus ea enim dolorum recusandae placeat sed tempora ratione nisi
+                iste, pariatur voluptatum amet ab iure commodi modi adipisci? Architecto facilis eveniet aperiam.
+                Placeat, id tenetur dolor earum labore doloremque qui ducimus, neque numquam molestias consequatur nihil
+                architecto!</div>
+        </div>
+    </section>
+
+    <script type="module" src="./assets/js/script.js"></script>
+</body>
+
+</html>
