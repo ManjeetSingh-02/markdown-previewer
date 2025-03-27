@@ -5,12 +5,12 @@ import showdown from "https://cdn.jsdelivr.net/npm/showdown@2.1.0/+esm";
 const previewArea = document.getElementById("previewArea");
 const writingArea = document.getElementById("writingArea");
 
+// create a converter for html conversion
+const converter = new showdown.Converter();
+
 // function to display parse HTML
 function convertText() {
-  // create a converter for html conversion
-  const converter = new showdown.Converter();
-
-  // insert into preview container by converting the md into html
+  // converting the md into html and append inside the preview container
   previewArea.innerHTML = converter.makeHtml(writingArea.value.trim());
 }
 

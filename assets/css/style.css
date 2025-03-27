@@ -136,7 +136,8 @@ nav h1 {
     border-bottom-right-radius: 10px;
 }
 
-.writing-area, .preview-area {
+.writing-area,
+.preview-area {
     overflow: auto;
     padding: 15px;
 }

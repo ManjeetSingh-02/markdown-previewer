@@ -28,38 +28,34 @@
     <section class="editor">
         <!-- EDITOR OPTIONS(bold button, italic button etc) -->
         <div class="editor-options">
-            <button title="Bold">
+            <button id="boldBtn" title="Bold">
                 <img src="./assets/icons/bold.svg" alt="Bold" class="filter-img">
             </button>
-            <button title="Italic">
+            <button id="italicBtn" title="Italic">
                 <img src="./assets/icons/italic.svg" alt="Italic" class="filter-img">
             </button>
-            <button title="Underline">
-                <img src="./assets/icons/underline.svg" alt="Underline" class="filter-img">
-            </button>
-            <button title="Heading 1">
+            <button id="heading1Btn" title="Heading 1">
                 <img src="./assets/icons/heading_1.svg" alt="Heading 1" class="filter-img">
             </button>
-            <button title="Heading 2">
+            <button id="heading2Btn" title="Heading 2">
                 <img src="./assets/icons/heading_2.svg" alt="Heading 2" class="filter-img">
             </button>
-            <button title="Heading 3">
+            <button id="heading3Btn" title="Heading 3">
                 <img src="./assets/icons/heading_3.svg" alt="Heading 3" class="filter-img">
             </button>
-            <button title="Link">
+            <button id="linkBtn" title="Link">
                 <img src="./assets/icons/link.svg" alt="Link" class="filter-img">
             </button>
-            <button title="Unordered List">
+            <button id="unorderedListBtn" title="Unordered List">
                 <img src="./assets/icons/unordered_list.svg" alt="Unordered List" class="filter-img">
             </button>
-            <button title="Ordered List">
+            <button id="orderedListBtn" title="Ordered List">
                 <img src="./assets/icons/ordered_list.svg" alt="Ordered List" class="filter-img">
             </button>
-            <button title="Code">
+            <button id="codeBtn" title="Code">
                 <img src="./assets/icons/code.svg" alt="Code" class="filter-img">
             </button>
-
-            <button title="Erase All">
+            <button id="eraseAllBtn" title="Erase All">
                 <img src="./assets/icons/eraser.svg" alt="Erase All" class="filter-img">
             </button>
         </div>
@@ -67,10 +63,11 @@
         <!-- EDITOR TEXT AREA -->
         <div class="text-areas">
             <!-- WRITING AREA -->
-            <textarea class="writing-area" name="inputInput" id="textInput"></textarea>
+            <textarea autofocus placeholder="Start writing here ..." class="writing-area" name="inputInput"
+                id="writingArea"></textarea>
 
             <!-- PREVIEW AREA -->
-            <div class="preview-area"></div>
+            <div id="previewArea" class="preview-area"></div>
         </div>
     </section>
 
