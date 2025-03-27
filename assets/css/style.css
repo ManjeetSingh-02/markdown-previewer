@@ -62,6 +62,17 @@ button img {
     width: 20px;
 }
 
+/* -------------------------------- default textarea styles -------------------------------- */
+textarea {
+    width: 100%;
+    height: 100%;
+    color: var(--text-color);
+    outline: none;
+    background: transparent;
+    border: none;
+    resize: none;
+}
+
 /* -------------------------------- navbar styles -------------------------------- */
 nav {
     display: flex;
@@ -106,7 +117,7 @@ nav h1 {
     background-color: var(--bg-shadow);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     padding: 10px;
 }
 
@@ -125,7 +136,7 @@ nav h1 {
     border-bottom-right-radius: 10px;
 }
 
-.text-areas div {
+.writing-area, .preview-area {
     overflow: auto;
     padding: 15px;
 }
@@ -135,7 +146,18 @@ nav h1 {
     border-right: 1px solid var(--border-color);
 }
 
-/* -------------------------------- preview area styles -------------------------------- */
-.preview-area {
-    border-left: 1px solid var(--border-color);
+/* -------------------------------- text areas custom scrollbar styles -------------------------------- */
+.writing-area::-webkit-scrollbar,
+.preview-area::-webkit-scrollbar {
+    width: 2px;
+}
+
+.writing-area::-webkit-scrollbar-track,
+.preview-area::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.writing-area::-webkit-scrollbar-thumb,
+.preview-area::-webkit-scrollbar-thumb {
+    border: 2px solid var(--accent-color);
 }
