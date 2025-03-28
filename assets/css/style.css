@@ -50,11 +50,12 @@ button {
     padding: 10px;
     cursor: pointer;
     background-color: transparent;
+    border-radius: 10px;
+    transition: all 0.3s;
 }
 
 button:hover {
     border: 2px solid var(--accent-color);
-    transition: all 0.3s;
 }
 
 button img {
@@ -95,10 +96,6 @@ nav h1 {
     gap: 10px;
 }
 
-.nav-btns button {
-    border-radius: 50%;
-}
-
 /* -------------------------------- editor styles -------------------------------- */
 .editor {
     display: flex;
@@ -119,10 +116,6 @@ nav h1 {
     border-top-right-radius: 10px;
     border-bottom: 1px solid var(--border-color);
     padding: 10px;
-}
-
-.editor-options button {
-    border-radius: 10px;
 }
 
 /* -------------------------------- more headings styles -------------------------------- */
