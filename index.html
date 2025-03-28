@@ -4,17 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markdown Previewer</title>
+    <title>Home - Markdown Previewer</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <!-- NAVBAR -->
     <nav>
-        <a href="/">Markdown Previewer</a>
+        <h1>Markdown Previewer</h1>
 
         <!-- theme and github buttons -->
         <div class="nav-btns">
+            <button id="helpBoxBtn" title="Open Help Box">
+                <img id="helpImg" src="./assets/icons/help.svg" alt="Help" class="filter-img">
+            </button>
             <button id="switchThemeBtn" title="Switch Theme">
                 <img id="themeImg" src="./assets/icons/moon.svg" alt="Theme" class="filter-img">
             </button>
@@ -26,51 +29,49 @@
 
     <!-- EDITOR -->
     <section class="editor">
-        <!-- EDITOR OPTIONS -->
+        <!-- EDITOR OPTIONS(bold button, italic button etc) -->
         <div class="editor-options">
-            <!-- MARKDOWN TOOLS(bold button, italic button etc) -->
-            <div class="md-tools">
-                <button id="boldBtn" title="Bold">
-                    <img src="./assets/icons/bold.svg" alt="Bold" class="filter-img">
-                </button>
-                <button id="italicBtn" title="Italic">
-                    <img src="./assets/icons/italic.svg" alt="Italic" class="filter-img">
-                </button>
-                <button id="heading1Btn" title="Heading 1">
-                    <img src="./assets/icons/heading_1.svg" alt="Heading 1" class="filter-img">
-                </button>
-                <button id="heading2Btn" title="Heading 2">
-                    <img src="./assets/icons/heading_2.svg" alt="Heading 2" class="filter-img">
-                </button>
-                <button id="heading3Btn" title="Heading 3">
-                    <img src="./assets/icons/heading_3.svg" alt="Heading 3" class="filter-img">
-                </button>
-                <button id="linkBtn" title="Link">
-                    <img src="./assets/icons/link.svg" alt="Link" class="filter-img">
-                </button>
-                <button id="unorderedListBtn" title="Unordered List">
-                    <img src="./assets/icons/unordered_list.svg" alt="Unordered List" class="filter-img">
-                </button>
-                <button id="orderedListBtn" title="Ordered List">
-                    <img src="./assets/icons/ordered_list.svg" alt="Ordered List" class="filter-img">
-                </button>
-                <button id="codeBtn" title="Code">
-                    <img src="./assets/icons/code.svg" alt="Code" class="filter-img">
-                </button>
-            </div>
-
-            <!-- MARKDOWN HELPER -->
-            <div class="md-extra-tools">
-                <!-- TOOLTIP BOX -->
-                <button id="tooltipsBtn" title="Tool Tips">
-                    <img src="./assets/icons/tooltips.svg" alt="Tool Tips" class="filter-img">
-                </button>
-
-                <!-- ERASE ALL -->
-                <button id="eraseAllBtn" title="Erase All">
-                    <img src="./assets/icons/eraser.svg" alt="Erase All" class="filter-img">
-                </button>
-            </div>
+            <button id="boldBtn" title="Bold">
+                <img src="./assets/icons/bold.svg" alt="Bold" class="filter-img">
+            </button>
+            <button id="italicBtn" title="Italic">
+                <img src="./assets/icons/italic.svg" alt="Italic" class="filter-img">
+            </button>
+            <button id="heading1Btn" title="Heading 1">
+                <img src="./assets/icons/heading_1.svg" alt="Heading 1" class="filter-img">
+            </button>
+            <button id="heading2Btn" title="Heading 2">
+                <img src="./assets/icons/heading_2.svg" alt="Heading 2" class="filter-img">
+            </button>
+            <button id="heading3Btn" title="Heading 3">
+                <img src="./assets/icons/heading_3.svg" alt="Heading 3" class="filter-img">
+            </button>
+            <button id="moreHeadingsBtn" class="more-headings" title="View more headings">
+                <img src="./assets/icons/more_headings.svg" alt="View More Headings" class="filter-img">
+                <div class="more-headings-box">
+                    <span title="Heading 4" id="heading4Btn">H4</span>
+                    <span title="Heading 5" id="heading5Btn">H5</span>
+                    <span title="Heading 6" id="heading6Btn">H6</span>
+                </div>
+            </button>
+            <button id="linkBtn" title="Link">
+                <img src="./assets/icons/link.svg" alt="Link" class="filter-img">
+            </button>
+            <button id="unorderedListBtn" title="Unordered List">
+                <img src="./assets/icons/unordered_list.svg" alt="Unordered List" class="filter-img">
+            </button>
+            <button id="orderedListBtn" title="Ordered List">
+                <img src="./assets/icons/ordered_list.svg" alt="Ordered List" class="filter-img">
+            </button>
+            <button id="inlineCodeBtn" title="Inline Code">
+                <img src="./assets/icons/code.svg" alt="Inline Code" class="filter-img">
+            </button>
+            <button id="blockCodeBtn" title="Block Code">
+                <img src="./assets/icons/code.svg" alt="Block Code" class="filter-img">
+            </button>
+            <button id="eraseAllBtn" title="Erase All">
+                <img src="./assets/icons/eraser.svg" alt="Erase All" class="filter-img">
+            </button>
         </div>
 
         <!-- EDITOR TEXT AREA -->

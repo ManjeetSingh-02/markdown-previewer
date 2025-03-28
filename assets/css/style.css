@@ -82,17 +82,9 @@ nav {
     margin: 10px auto;
 }
 
-/* -------------------------------- navbar a > heading styles -------------------------------- */
-nav a {
-    text-decoration: none;
-    color: var(--text-color);
+/* -------------------------------- navbar heading styles -------------------------------- */
+nav h1 {
     font-size: 2rem;
-}
-
-nav a:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--border-color);
-    text-decoration-thickness: 2px;
 }
 
 /* -------------------------------- navbar button styles -------------------------------- */
@@ -120,7 +112,7 @@ nav a:hover {
 .editor-options {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 5px;
     width: 100%;
     background-color: var(--bg-shadow);
     border-top-left-radius: 10px;
@@ -133,11 +125,49 @@ nav a:hover {
     border-radius: 10px;
 }
 
-.md-tools,
-.md-extra-tools {
+/* -------------------------------- more headings styles -------------------------------- */
+.more-headings {
+    position: relative;
+}
+
+.more-headings-box {
+    position: absolute;
     display: flex;
     align-items: center;
-    gap: 5px;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    top: 120%;
+    background-color: var(--card-bg);
+    translate: 0 -20%;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px 10px;
+    transition: all 0.5s;
+}
+
+.more-headings:hover {
+    img {
+        animation: spin 0.3s ease-in both;
+    }
+
+    .more-headings-box {
+        translate: 0%;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.more-headings-box span {
+    text-align: start;
+    color: var(--text-color);
+    width: 100%;
+}
+
+.more-headings-box span:hover {
+    text-decoration: underline;
 }
 
 /* -------------------------------- text areas styles -------------------------------- */
@@ -155,6 +185,7 @@ nav a:hover {
 .preview-area {
     overflow: auto;
     padding: 15px;
+    font-size: 1.5rem;
 }
 
 /* -------------------------------- writing area styles -------------------------------- */
@@ -176,4 +207,15 @@ nav a:hover {
 .writing-area::-webkit-scrollbar-thumb,
 .preview-area::-webkit-scrollbar-thumb {
     border: 2px solid var(--accent-color);
+}
+
+/* -------------------------------- spin animation styles -------------------------------- */
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 180deg;
+    }
 }
