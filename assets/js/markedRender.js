@@ -7,12 +7,9 @@ const writingArea = document.getElementById("writingArea");
 
 // create a converter for html conversion with some extended features
 const converter = new showdown.Converter({
-  simpleLineBreaks: "true",
+  disableForced4SpacesIndentedSublists: true,
   smartIndentationFix: "true",
   smoothLivePreview: "true",
-  strikethrough: "true",
-  tasklists: "true",
-  underline: "true",
 });
 
 // function to display parse HTML
@@ -21,5 +18,20 @@ function convertText() {
   previewArea.innerHTML = converter.makeHtml(writingArea.value.trim());
 }
 
-// export function
-export default convertText;
+// function to add 4 indent spaces
+function addIndents(e) {
+  if (e.key === "Tab") {
+    // prevent default tab behaviour
+    e.preventDefault();
+
+    // get cursor current position from start and end
+    const start = writingArea.selectionStart;
+    const end = writingArea.selectionEnd;
+
+    // Insert four spaces at the current cursor position
+    writingArea.value = writingArea.value.substring(0, start) + "  " + writingArea.value.substring(end);
+  }
+}
+
+// export functions
+export { convertText, addIndents };

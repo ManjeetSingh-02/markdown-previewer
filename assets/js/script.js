@@ -1,5 +1,5 @@
 // import all the functions from other files
-import convertText from "./markedRender.js";
+import { convertText, addIndents } from "./markedRender.js";
 import { loadTheme, switchTheme } from "./themeFns.js";
 
 // get all the elements from their id's
@@ -19,6 +19,9 @@ openGitHubBtn.addEventListener("click", () => window.open("https://github.com/Ma
 
 // change preview according to text input via listener
 writingArea.addEventListener("input", convertText);
+
+// add indent tab key press
+writingArea.addEventListener("keydown", (e) => addIndents(e));
 
 // load the default functionality when page loads first time
 document.addEventListener("DOMContentLoaded", async () => {

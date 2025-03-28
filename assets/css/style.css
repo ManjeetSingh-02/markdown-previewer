@@ -133,7 +133,7 @@ nav h1 {
     border: 2px solid var(--accent-color);
     border-radius: 10px;
     top: 120%;
-    background-color: var(--card-bg);
+    background-color: var(--bg-shadow);
     translate: 0 -20%;
     visibility: hidden;
     opacity: 0;
@@ -178,12 +178,68 @@ nav h1 {
 .preview-area {
     overflow: auto;
     padding: 15px;
-    font-size: 1.5rem;
 }
 
 /* -------------------------------- writing area styles -------------------------------- */
 .writing-area {
     border-right: 1px solid var(--border-color);
+}
+
+/* -------------------------------- preview area styles -------------------------------- */
+.preview-area p {
+    font-size: 1.5rem;
+}
+
+.preview-area h1 {
+    font-size: 3rem;
+}
+
+.preview-area h2 {
+    font-size: 2.25rem;
+}
+
+.preview-area h3 {
+    font-size: 1.75rem;
+}
+
+.preview-area h4 {
+    font-size: 1.5rem;
+}
+
+.preview-area h5 {
+    font-size: 1.24rem;
+}
+
+.preview-area h6 {
+    font-size: 1rem;
+}
+
+.preview-area ul,
+.preview-area ol {
+    padding: 0 1em;
+}
+
+.preview-area ul li,
+.preview-area ol li {
+    font-size: 1.5rem;
+}
+
+.preview-area p code {
+    background: var(--border-color);
+    padding: 0 5px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.preview-area pre code {
+    background: var(--border-color);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.5rem;
 }
 
 /* -------------------------------- text areas custom scrollbar styles -------------------------------- */
