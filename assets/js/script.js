@@ -1,15 +1,12 @@
 // import all the functions from other files
 import { convertText, addIndents } from "./markedRender.js";
 import { loadTheme, switchTheme } from "./themeFns.js";
+import changePreviewText from "./optionFns.js";
 
 // get all the elements from their id's
-const helpBoxBtn = document.getElementById("helpBoxBtn");
 const switchThemeBtn = document.getElementById("switchThemeBtn");
 const openGitHubBtn = document.getElementById("openGitHubBtn");
 const writingArea = document.getElementById("writingArea");
-
-// open help box on click
-helpBoxBtn.addEventListener("click", () => alert("coming soon"));
 
 // switch theme on click of the button
 switchThemeBtn.addEventListener("click", switchTheme);
