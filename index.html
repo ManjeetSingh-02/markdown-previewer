@@ -11,7 +11,7 @@
 <body>
     <!-- NAVBAR -->
     <nav>
-        <h1>Markdown Previewer</h1>
+        <a href="/">Markdown Previewer</a>
 
         <!-- theme and github buttons -->
         <div class="nav-btns">
@@ -26,38 +26,51 @@
 
     <!-- EDITOR -->
     <section class="editor">
-        <!-- EDITOR OPTIONS(bold button, italic button etc) -->
+        <!-- EDITOR OPTIONS -->
         <div class="editor-options">
-            <button id="boldBtn" title="Bold">
-                <img src="./assets/icons/bold.svg" alt="Bold" class="filter-img">
-            </button>
-            <button id="italicBtn" title="Italic">
-                <img src="./assets/icons/italic.svg" alt="Italic" class="filter-img">
-            </button>
-            <button id="heading1Btn" title="Heading 1">
-                <img src="./assets/icons/heading_1.svg" alt="Heading 1" class="filter-img">
-            </button>
-            <button id="heading2Btn" title="Heading 2">
-                <img src="./assets/icons/heading_2.svg" alt="Heading 2" class="filter-img">
-            </button>
-            <button id="heading3Btn" title="Heading 3">
-                <img src="./assets/icons/heading_3.svg" alt="Heading 3" class="filter-img">
-            </button>
-            <button id="linkBtn" title="Link">
-                <img src="./assets/icons/link.svg" alt="Link" class="filter-img">
-            </button>
-            <button id="unorderedListBtn" title="Unordered List">
-                <img src="./assets/icons/unordered_list.svg" alt="Unordered List" class="filter-img">
-            </button>
-            <button id="orderedListBtn" title="Ordered List">
-                <img src="./assets/icons/ordered_list.svg" alt="Ordered List" class="filter-img">
-            </button>
-            <button id="codeBtn" title="Code">
-                <img src="./assets/icons/code.svg" alt="Code" class="filter-img">
-            </button>
-            <button id="eraseAllBtn" title="Erase All">
-                <img src="./assets/icons/eraser.svg" alt="Erase All" class="filter-img">
-            </button>
+            <!-- MARKDOWN TOOLS(bold button, italic button etc) -->
+            <div class="md-tools">
+                <button id="boldBtn" title="Bold">
+                    <img src="./assets/icons/bold.svg" alt="Bold" class="filter-img">
+                </button>
+                <button id="italicBtn" title="Italic">
+                    <img src="./assets/icons/italic.svg" alt="Italic" class="filter-img">
+                </button>
+                <button id="heading1Btn" title="Heading 1">
+                    <img src="./assets/icons/heading_1.svg" alt="Heading 1" class="filter-img">
+                </button>
+                <button id="heading2Btn" title="Heading 2">
+                    <img src="./assets/icons/heading_2.svg" alt="Heading 2" class="filter-img">
+                </button>
+                <button id="heading3Btn" title="Heading 3">
+                    <img src="./assets/icons/heading_3.svg" alt="Heading 3" class="filter-img">
+                </button>
+                <button id="linkBtn" title="Link">
+                    <img src="./assets/icons/link.svg" alt="Link" class="filter-img">
+                </button>
+                <button id="unorderedListBtn" title="Unordered List">
+                    <img src="./assets/icons/unordered_list.svg" alt="Unordered List" class="filter-img">
+                </button>
+                <button id="orderedListBtn" title="Ordered List">
+                    <img src="./assets/icons/ordered_list.svg" alt="Ordered List" class="filter-img">
+                </button>
+                <button id="codeBtn" title="Code">
+                    <img src="./assets/icons/code.svg" alt="Code" class="filter-img">
+                </button>
+            </div>
+
+            <!-- MARKDOWN HELPER -->
+            <div class="md-extra-tools">
+                <!-- TOOLTIP BOX -->
+                <button id="tooltipsBtn" title="Tool Tips">
+                    <img src="./assets/icons/tooltips.svg" alt="Tool Tips" class="filter-img">
+                </button>
+
+                <!-- ERASE ALL -->
+                <button id="eraseAllBtn" title="Erase All">
+                    <img src="./assets/icons/eraser.svg" alt="Erase All" class="filter-img">
+                </button>
+            </div>
         </div>
 
         <!-- EDITOR TEXT AREA -->

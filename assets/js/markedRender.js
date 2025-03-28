@@ -5,8 +5,15 @@ import showdown from "https://cdn.jsdelivr.net/npm/showdown@2.1.0/+esm";
 const previewArea = document.getElementById("previewArea");
 const writingArea = document.getElementById("writingArea");
 
-// create a converter for html conversion
-const converter = new showdown.Converter();
+// create a converter for html conversion with some extended features
+const converter = new showdown.Converter({
+  simpleLineBreaks: "true",
+  smartIndentationFix: "true",
+  smoothLivePreview: "true",
+  strikethrough: "true",
+  tasklists: "true",
+  underline: "true",
+});
 
 // function to display parse HTML
 function convertText() {

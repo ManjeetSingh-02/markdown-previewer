@@ -82,9 +82,17 @@ nav {
     margin: 10px auto;
 }
 
-/* -------------------------------- navbar heading styles -------------------------------- */
-nav h1 {
+/* -------------------------------- navbar a > heading styles -------------------------------- */
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
     font-size: 2rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--border-color);
+    text-decoration-thickness: 2px;
 }
 
 /* -------------------------------- navbar button styles -------------------------------- */
@@ -112,7 +120,7 @@ nav h1 {
 .editor-options {
     display: flex;
     align-items: center;
-    gap: 5px;
+    justify-content: space-between;
     width: 100%;
     background-color: var(--bg-shadow);
     border-top-left-radius: 10px;
@@ -123,6 +131,13 @@ nav h1 {
 
 .editor-options button {
     border-radius: 10px;
+}
+
+.md-tools,
+.md-extra-tools {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 /* -------------------------------- text areas styles -------------------------------- */

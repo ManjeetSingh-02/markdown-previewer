@@ -23,4 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // load default theme
   loadTheme();
+
+  // if something present in writing area by default, then convert it into HTML
+  if (writingArea.textContent) convertText();
 });
