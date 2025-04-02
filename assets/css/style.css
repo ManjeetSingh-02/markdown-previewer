@@ -107,6 +107,7 @@ nav h1 {
     z-index: 100;
     translate: 0 -200%;
     transition: all 0.3s;
+    overflow: auto;
 }
 
 .instructions-box-title {
@@ -342,5 +343,38 @@ nav h1 {
 
     100% {
         rotate: 180deg;
+    }
+}
+
+/* -------------------------------- media styles for responsiveness -------------------------------- */
+@media screen and (max-width: 1280px) {
+    .instructions-box-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .instructions-box-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav h1 {
+        font-size: 1.5rem;
+    }
+
+    .editor-options {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .text-areas {
+        height: 70vh;
     }
 }
