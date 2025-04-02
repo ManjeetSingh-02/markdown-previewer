@@ -186,7 +186,12 @@ nav h1 {
 }
 
 /* -------------------------------- preview area styles -------------------------------- */
+.preview-area {
+    word-break: break-word;
+}
+
 .preview-area p {
+    margin: 5px 0;
     font-size: 1.5rem;
 }
 
@@ -231,15 +236,31 @@ nav h1 {
     font-size: 1.5rem;
 }
 
-.preview-area pre code {
+
+.preview-area pre {
     background: var(--border-color);
-    padding: 5px;
+    margin: 5px 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    flex-direction: column;
+    padding: 5px;
     border-radius: 5px;
     font-size: 1.5rem;
+    width: 100%;
+}
+
+.preview-area pre span {
+    width: fit-content;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    background-color: var(--bg-shadow);
+    padding: 2px 5px;
+}
+
+.preview-area pre code {
+    width: 80%;
+    margin: auto;
+    text-wrap: wrap;
+    padding-bottom: 10px;
 }
 
 /* -------------------------------- text areas custom scrollbar styles -------------------------------- */

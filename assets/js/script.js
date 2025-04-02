@@ -1,7 +1,6 @@
 // import all the functions from other files
 import { convertText, addIndents } from "./markedRender.js";
 import { loadTheme, switchTheme } from "./themeFns.js";
-import changePreviewText from "./optionFns.js";
 
 // get all the elements from their id's
 const switchThemeBtn = document.getElementById("switchThemeBtn");
