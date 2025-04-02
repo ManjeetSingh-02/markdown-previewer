@@ -35,12 +35,15 @@ Build a simple readme markdown previewer that allows users to enter markdown tex
 - **Accessible** on both mobile devices and desktops
 - **Responsive** on both mobile devices and desktops
 - Functionality to **switch b/w light and dark theme** by clicking on **Theme Icon Button**
+- Functionality to toggle the instruction box for usage of web app
 - Functionality for handling multiple things:
-  - Headings
+  - Headings(H1, H2, H3, H4, H5, H6)
   - Links
   - Bold
   - Italics
+  - Lists(ordered and unordered)
   - Code(inline and blocks)
+  - Clear/Reset
 
 ## Important Information
 

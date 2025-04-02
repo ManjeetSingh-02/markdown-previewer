@@ -1,19 +1,7 @@
 // import all the functions from other files
 import { convertText, addIndents } from "./markedRender.js";
 import { loadTheme, switchTheme } from "./themeFns.js";
-import {
-  mdBold,
-  mdItalic,
-  mdLink,
-  mdHeading1,
-  mdHeading2,
-  mdHeading3,
-  mdHeading4,
-  mdHeading5,
-  mdHeading6,
-  mdInlineCode,
-  mdClear,
-} from "./optionsFns.js";
+import { mdBold, mdItalic, mdLink, mdHeading1, mdHeading2, mdHeading3, mdHeading4, mdHeading5, mdHeading6, mdInlineCode, mdClear } from "./optionsFns.js";
 
 // get all the elements from their id's
 const switchThemeBtn = document.getElementById("switchThemeBtn");
@@ -30,6 +18,9 @@ const heading5Btn = document.getElementById("heading5Btn");
 const heading6Btn = document.getElementById("heading6Btn");
 const inlineCodeBtn = document.getElementById("inlineCodeBtn");
 const eraseAllBtn = document.getElementById("eraseAllBtn");
+const instructionsBox = document.getElementById("instructionsBox");
+const openInstructionsBtn = document.getElementById("openInstructionsBtn");
+const closeInstructionsBtn = document.getElementById("closeInstructionsBtn");
 
 // switch theme on click of the button
 switchThemeBtn.addEventListener("click", switchTheme);
@@ -49,6 +40,12 @@ heading5Btn.addEventListener("click", mdHeading5);
 heading6Btn.addEventListener("click", mdHeading6);
 inlineCodeBtn.addEventListener("click", mdInlineCode);
 eraseAllBtn.addEventListener("click", mdClear);
+
+// open the instructions box on click
+openInstructionsBtn.addEventListener("click", () => (instructionsBox.style.translate = "0 0"));
+
+// close the instructions box on click
+closeInstructionsBtn.addEventListener("click", () => (instructionsBox.style.translate = "0 -200%"));
 
 // change preview according to text input via listener
 writingArea.addEventListener("input", convertText);
