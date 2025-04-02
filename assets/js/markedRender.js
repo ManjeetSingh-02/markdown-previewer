@@ -17,6 +17,9 @@ function convertText() {
   // converting the md into html and append inside the preview container
   previewArea.innerHTML = converter.makeHtml(writingArea.value.trim());
 
+  // update local storage obj
+  updateMD();
+
   // check for code blocks
   checkPreCodeTags();
 }
@@ -61,5 +64,34 @@ function checkPreCodeTags() {
   });
 }
 
+// function to load default md text
+function loadMD() {
+  // get default object
+  const localStorageObj = JSON.parse(localStorage.getItem("markdownPreviewer"));
+
+  // sets default md text if not present
+  if (!localStorageObj.md) {
+    localStorageObj.md =
+      'normal-text\n\n*italic-text*\n\n**bold-text**\n\n***bold + italic text***\n\n# heading 1\n\n## heading 2\n\n### heading 3\n\n#### heading 4\n\n##### heading 5\n\n###### heading 6\n\n[Link Text](https://link-here.com)\n\n`inline code`\n\n```js\nconsole.log("Block Code")\n```\n\n- Ordered List Item 1\n - Ordered List Item 1.1\n\n1. Unordered List Item 1\n 2. Unordered List Item 1.1';
+    localStorage.setItem("markdownPreviewer", JSON.stringify(localStorageObj));
+  }
+
+  // write the local storage md in text area
+  writingArea.value = localStorageObj.md;
+
+  // convert the default md to html
+  convertText();
+}
+
+// function to update default md text
+function updateMD() {
+  // get default object
+  const localStorageObj = JSON.parse(localStorage.getItem("markdownPreviewer"));
+
+  // update md text
+  localStorageObj.md = writingArea.value.trim();
+  localStorage.setItem("markdownPreviewer", JSON.stringify(localStorageObj));
+}
+
 // export functions
-export { convertText, addIndents };
+export { convertText, addIndents, loadMD };

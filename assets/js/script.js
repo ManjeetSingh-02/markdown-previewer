@@ -1,5 +1,5 @@
 // import all the functions from other files
-import { convertText, addIndents } from "./markedRender.js";
+import { convertText, addIndents, loadMD } from "./markedRender.js";
 import { loadTheme, switchTheme } from "./themeFns.js";
 import { mdBold, mdItalic, mdLink, mdHeading1, mdHeading2, mdHeading3, mdHeading4, mdHeading5, mdHeading6, mdInlineCode, mdClear } from "./optionsFns.js";
 
@@ -61,6 +61,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   // load default theme
   loadTheme();
 
+  // load default text
+  loadMD();
+
   // if something present in writing area by default, then convert it into HTML
-  if (writingArea.textContent) convertText();
+  convertText();
 });
