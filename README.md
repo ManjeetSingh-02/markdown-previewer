@@ -74,7 +74,7 @@ Build a simple readme markdown previewer that allows users to enter markdown tex
 ## Deployment
 
 - Application is deployed on GitHub Pages for accessibility across web
-- View Website - [**Click Here**](https://manjeetsingh-02.github.io/masterji-markdown-previewer/)
+- View Website - [**Click Here**](https://manjeetsingh-02.github.io/markdown-previewer/)
 
 ## Contributing
 
